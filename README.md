@@ -4,6 +4,10 @@
 
 This repository contains the SQL code for the database of the ***u-compoensar-sql-zoo*** project. Follow the steps below to set up your environment, create the database, insert the data, and execute the queries.
 
+### Video Evidence
+
+<video src="https://github-production-user-asset-6210df.s3.amazonaws.com/46028122/509173951-e619ad95-016b-4773-8324-b72811be8224.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251103%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251103T202946Z&X-Amz-Expires=300&X-Amz-Signature=6935539fcd78424f75a3c1baeeb3a9943ba7a6d09c5a81cfd946893885362772&X-Amz-SignedHeaders=host"></video>
+
 ## 🛠️ Prerequisites
 
 To run the SQL code, you need to have **MySQL** (the database server and client tools) installed on your system.
@@ -43,7 +47,7 @@ Once installed, the MySQL service should be running in the background.
 
 ## ⚙️ Project Usage: Executing the SQL Code
 
-### 1. Connect to the MySQL Server
+### Connect to the MySQL Server
 
 Open your terminal (or PowerShell) and enter the MySQL client using your `root` user:
 
@@ -52,33 +56,3 @@ Open your terminal (or PowerShell) and enter the MySQL client using your `root` 
     mysql -u root -p
     ```
     * Enter your `root` **password** when prompted.
-
-### 2. Run the Main Script
-
-Once inside the MySQL client (`mysql>`), use the `source` command to execute your main SQL file. This script should contain the necessary `CREATE DATABASE`, `CREATE TABLE`, and `INSERT INTO` statements.
-
-1.  **Execute the Script (DB and Table Creation/Insertion):**
-
-    ```sql
-    source /path/to/your/script/script_name.sql;
-    ```
-    * **Example:** `source C:/Users/user/Desktop/ucompensar_project.sql;`
-
-### 3. Execute Queries
-
-After the data is loaded, you can start running queries to interact with the database.
-
-1.  **Select the Database:**
-    ```sql
-    USE your_database_name;
-    ```
-
-2.  **Run Example Queries:**
-    ```sql
-    SELECT column_name, other_column FROM table_name WHERE condition;
-    ```
-
-3.  **To Exit:**
-    ```sql
-    QUIT;
-    ```
