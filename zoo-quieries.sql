@@ -39,3 +39,22 @@ SELECT
 FROM animals
 JOIN families ON animals.family_id = families.family_id
 WHERE families.family_name = 'Canidae';
+
+SELECT 
+	extinction_risk,
+    COUNT(*) AS total_animals
+FROM animals
+GROUP BY extinction_risk;
+
+SELECT 
+    families.family_name,
+    COUNT(animals.family_id) AS total_animals
+FROM animals
+WHERE families ON animals.family_id = families.family_id
+
+SELECT 
+    families.family_name,
+    SUM(CASE WHEN animals.animal_id IS NOT NULL THEN 1 ELSE 0 END) AS total_animals
+FROM families
+LEFT JOIN animals ON animals.family_id = families.family_id
+GROUP BY families.family_name;
