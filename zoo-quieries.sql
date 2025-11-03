@@ -49,8 +49,9 @@ GROUP BY extinction_risk;
 SELECT 
     families.family_name,
     COUNT(animals.family_id) AS total_animals
-FROM animals
-WHERE families ON animals.family_id = families.family_id
+FROM families
+LEFT JOIN animals ON animals.family_id = families.family_id
+GROUP BY families.family_name;
 
 SELECT 
     families.family_name,
